@@ -1,0 +1,6 @@
+framework module Pods_TripSplit {
+  umbrella header "Pods-TripSplit-umbrella.h"
+
+  export *
+  module * { export * }
+}

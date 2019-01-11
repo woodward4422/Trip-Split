@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A7330F721C5B55F00A104DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7330F621C5B55F00A104DA /* AppDelegate.swift */; };
+		7A7330F921C5B55F00A104DA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7330F821C5B55F00A104DA /* HomeViewController.swift */; };
+		7A7330FC21C5B55F00A104DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A7330FA21C5B55F00A104DA /* Main.storyboard */; };
+		7A7330FF21C5B55F00A104DA /* TripSplit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A7330FD21C5B55F00A104DA /* TripSplit.xcdatamodeld */; };
+		7A73310121C5B56000A104DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A73310021C5B56000A104DA /* Assets.xcassets */; };
+		7A73310421C5B56000A104DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A73310221C5B56000A104DA /* LaunchScreen.storyboard */; };
+		7A73311021C5B5D500A104DA /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73310F21C5B5D500A104DA /* UserService.swift */; };
+		7A73311221C5B60600A104DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73311121C5B60600A104DA /* User.swift */; };
+		7A73311421C5B71E00A104DA /* TripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73311321C5B71E00A104DA /* TripCollectionViewCell.swift */; };
+		7A73311621C5B8FA00A104DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A73311521C5B8F900A104DA /* GoogleService-Info.plist */; };
+		7A73311821C5B9ED00A104DA /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73311721C5B9ED00A104DA /* Trip.swift */; };
+		7A73311C21C602D000A104DA /* CreateTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73311B21C602D000A104DA /* CreateTripViewController.swift */; };
+		7A73311E21C7038D00A104DA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73311D21C7038D00A104DA /* RegisterViewController.swift */; };
+		7A73312121C89CB300A104DA /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73312021C89CB300A104DA /* UIWindow.swift */; };
+		7A73312321CA043900A104DA /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73312221CA043900A104DA /* TripViewController.swift */; };
+		7A73312521CA0A2D00A104DA /* ExpenseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73312421CA0A2D00A104DA /* ExpenseCollectionViewCell.swift */; };
+		7A73317D21CDF2A500A104DA /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73317C21CDF2A500A104DA /* AddExpenseViewController.swift */; };
+		7A73317F21CECCCE00A104DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A73317E21CECCCE00A104DA /* LoginViewController.swift */; };
+		7ABC168E21DF06F000C5DEAD /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC168D21DF06F000C5DEAD /* InitialScreenViewController.swift */; };
+		7AD8B01E21D4172E0072297E /* SeeUsersInTripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8B01D21D4172E0072297E /* SeeUsersInTripTableViewController.swift */; };
+		7AD8B02021D584680072297E /* PayExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8B01F21D584680072297E /* PayExpenseViewController.swift */; };
+		CEE6B969E2B3CD769247A1EC /* Pods_TripSplit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C62638145CE76453468FF2F /* Pods_TripSplit.framework */; };
+		ED5D17BA21C5E9C2001C6664 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D17B921C5E9C2001C6664 /* Expense.swift */; };
+		ED5D17BC21C5EE50001C6664 /* JSONElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D17BB21C5EE50001C6664 /* JSONElement.swift */; };
+		ED7194F621C7155E0086BE7E /* TripService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7194F521C7155E0086BE7E /* TripService.swift */; };
+		ED7194F821C7217E0086BE7E /* ExpenseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7194F721C7217E0086BE7E /* ExpenseService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C62638145CE76453468FF2F /* Pods_TripSplit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripSplit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6778E3828556DCB2521AFA84 /* Pods-TripSplit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripSplit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TripSplit/Pods-TripSplit.release.xcconfig"; sourceTree = "<group>"; };
+		6F6E0605D25922D54C66280D /* Pods-TripSplit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripSplit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TripSplit/Pods-TripSplit.debug.xcconfig"; sourceTree = "<group>"; };
+		7A7330F321C5B55F00A104DA /* TripSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A7330F621C5B55F00A104DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A7330F821C5B55F00A104DA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7A7330FB21C5B55F00A104DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A7330FE21C5B55F00A104DA /* TripSplit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripSplit.xcdatamodel; sourceTree = "<group>"; };
+		7A73310021C5B56000A104DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A73310321C5B56000A104DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A73310521C5B56000A104DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A73310F21C5B5D500A104DA /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		7A73311121C5B60600A104DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7A73311321C5B71E00A104DA /* TripCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCollectionViewCell.swift; sourceTree = "<group>"; };
+		7A73311521C5B8F900A104DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7A73311721C5B9ED00A104DA /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		7A73311B21C602D000A104DA /* CreateTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTripViewController.swift; sourceTree = "<group>"; };
+		7A73311D21C7038D00A104DA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7A73312021C89CB300A104DA /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
+		7A73312221CA043900A104DA /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		7A73312421CA0A2D00A104DA /* ExpenseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCollectionViewCell.swift; sourceTree = "<group>"; };
+		7A73317C21CDF2A500A104DA /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		7A73317E21CECCCE00A104DA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7ABC168D21DF06F000C5DEAD /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
+		7AD8B01D21D4172E0072297E /* SeeUsersInTripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeUsersInTripTableViewController.swift; sourceTree = "<group>"; };
+		7AD8B01F21D584680072297E /* PayExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayExpenseViewController.swift; sourceTree = "<group>"; };
+		ED5D17B921C5E9C2001C6664 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		ED5D17BB21C5EE50001C6664 /* JSONElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONElement.swift; sourceTree = "<group>"; };
+		ED7194F521C7155E0086BE7E /* TripService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripService.swift; sourceTree = "<group>"; };
+		ED7194F721C7217E0086BE7E /* ExpenseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A7330F021C5B55F00A104DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE6B969E2B3CD769247A1EC /* Pods_TripSplit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BEEA45196E29B4FBD382617 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C62638145CE76453468FF2F /* Pods_TripSplit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A7330EA21C5B55F00A104DA = {
+			isa = PBXGroup;
+			children = (
+				7A7330F521C5B55F00A104DA /* TripSplit */,
+				7A7330F421C5B55F00A104DA /* Products */,
+				AFD10061BDB9CB71D256F15A /* Pods */,
+				2BEEA45196E29B4FBD382617 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7A7330F421C5B55F00A104DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A7330F321C5B55F00A104DA /* TripSplit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A7330F521C5B55F00A104DA /* TripSplit */ = {
+			isa = PBXGroup;
+			children = (
+				7A73311F21C89C7A00A104DA /* Extensions */,
+				7A73311521C5B8F900A104DA /* GoogleService-Info.plist */,
+				7A73310E21C5B5B600A104DA /* View */,
+				7A73310D21C5B5B000A104DA /* Controller */,
+				7A73310C21C5B5A800A104DA /* Model */,
+				7A73310B21C5B59C00A104DA /* Services */,
+				7A7330F621C5B55F00A104DA /* AppDelegate.swift */,
+				7A7330FA21C5B55F00A104DA /* Main.storyboard */,
+				7A73310021C5B56000A104DA /* Assets.xcassets */,
+				7A73310221C5B56000A104DA /* LaunchScreen.storyboard */,
+				7A73310521C5B56000A104DA /* Info.plist */,
+				7A7330FD21C5B55F00A104DA /* TripSplit.xcdatamodeld */,
+			);
+			path = TripSplit;
+			sourceTree = "<group>";
+		};
+		7A73310B21C5B59C00A104DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7A73310F21C5B5D500A104DA /* UserService.swift */,
+				ED7194F521C7155E0086BE7E /* TripService.swift */,
+				ED7194F721C7217E0086BE7E /* ExpenseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7A73310C21C5B5A800A104DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A73311121C5B60600A104DA /* User.swift */,
+				7A73311721C5B9ED00A104DA /* Trip.swift */,
+				ED5D17B921C5E9C2001C6664 /* Expense.swift */,
+				ED5D17BB21C5EE50001C6664 /* JSONElement.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A73310D21C5B5B000A104DA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A73317E21CECCCE00A104DA /* LoginViewController.swift */,
+				7A7330F821C5B55F00A104DA /* HomeViewController.swift */,
+				7A73311B21C602D000A104DA /* CreateTripViewController.swift */,
+				7A73311D21C7038D00A104DA /* RegisterViewController.swift */,
+				7A73312221CA043900A104DA /* TripViewController.swift */,
+				7AD8B01F21D584680072297E /* PayExpenseViewController.swift */,
+				7A73317C21CDF2A500A104DA /* AddExpenseViewController.swift */,
+				7AD8B01D21D4172E0072297E /* SeeUsersInTripTableViewController.swift */,
+				7ABC168D21DF06F000C5DEAD /* InitialScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7A73310E21C5B5B600A104DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A73311321C5B71E00A104DA /* TripCollectionViewCell.swift */,
+				7A73312421CA0A2D00A104DA /* ExpenseCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7A73311F21C89C7A00A104DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A73312021C89CB300A104DA /* UIWindow.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AFD10061BDB9CB71D256F15A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F6E0605D25922D54C66280D /* Pods-TripSplit.debug.xcconfig */,
+				6778E3828556DCB2521AFA84 /* Pods-TripSplit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A7330F221C5B55F00A104DA /* TripSplit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A73310821C5B56000A104DA /* Build configuration list for PBXNativeTarget "TripSplit" */;
+			buildPhases = (
+				AD37EEBA28AF63420BB1CE2F /* [CP] Check Pods Manifest.lock */,
+				7A7330EF21C5B55F00A104DA /* Sources */,
+				7A7330F021C5B55F00A104DA /* Frameworks */,
+				7A7330F121C5B55F00A104DA /* Resources */,
+				4E9811ED11378714154FA943 /* [CP] Embed Pods Frameworks */,
+				C1E8C40C31F18A68E18AE8B8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TripSplit;
+			productName = TripSplit;
+			productReference = 7A7330F321C5B55F00A104DA /* TripSplit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A7330EB21C5B55F00A104DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Noah Woodward";
+				TargetAttributes = {
+					7A7330F221C5B55F00A104DA = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 7A7330EE21C5B55F00A104DA /* Build configuration list for PBXProject "TripSplit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A7330EA21C5B55F00A104DA;
+			productRefGroup = 7A7330F421C5B55F00A104DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A7330F221C5B55F00A104DA /* TripSplit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A7330F121C5B55F00A104DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A73311621C5B8FA00A104DA /* GoogleService-Info.plist in Resources */,
+				7A73310421C5B56000A104DA /* LaunchScreen.storyboard in Resources */,
+				7A73310121C5B56000A104DA /* Assets.xcassets in Resources */,
+				7A7330FC21C5B55F00A104DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E9811ED11378714154FA943 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TripSplit/Pods-TripSplit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TripSplit/Pods-TripSplit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD37EEBA28AF63420BB1CE2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TripSplit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1E8C40C31F18A68E18AE8B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TripSplit/Pods-TripSplit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A7330EF21C5B55F00A104DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A73317F21CECCCE00A104DA /* LoginViewController.swift in Sources */,
+				7AD8B01E21D4172E0072297E /* SeeUsersInTripTableViewController.swift in Sources */,
+				7A73317D21CDF2A500A104DA /* AddExpenseViewController.swift in Sources */,
+				ED7194F821C7217E0086BE7E /* ExpenseService.swift in Sources */,
+				ED5D17BA21C5E9C2001C6664 /* Expense.swift in Sources */,
+				7A73312321CA043900A104DA /* TripViewController.swift in Sources */,
+				7A73311E21C7038D00A104DA /* RegisterViewController.swift in Sources */,
+				7A7330F921C5B55F00A104DA /* HomeViewController.swift in Sources */,
+				7A73311021C5B5D500A104DA /* UserService.swift in Sources */,
+				ED7194F621C7155E0086BE7E /* TripService.swift in Sources */,
+				7AD8B02021D584680072297E /* PayExpenseViewController.swift in Sources */,
+				ED5D17BC21C5EE50001C6664 /* JSONElement.swift in Sources */,
+				7A73312121C89CB300A104DA /* UIWindow.swift in Sources */,
+				7A73312521CA0A2D00A104DA /* ExpenseCollectionViewCell.swift in Sources */,
+				7A7330FF21C5B55F00A104DA /* TripSplit.xcdatamodeld in Sources */,
+				7A73311221C5B60600A104DA /* User.swift in Sources */,
+				7A7330F721C5B55F00A104DA /* AppDelegate.swift in Sources */,
+				7A73311821C5B9ED00A104DA /* Trip.swift in Sources */,
+				7A73311421C5B71E00A104DA /* TripCollectionViewCell.swift in Sources */,
+				7ABC168E21DF06F000C5DEAD /* InitialScreenViewController.swift in Sources */,
+				7A73311C21C602D000A104DA /* CreateTripViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7A7330FA21C5B55F00A104DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A7330FB21C5B55F00A104DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7A73310221C5B56000A104DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A73310321C5B56000A104DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7A73310621C5B56000A104DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7A73310721C5B56000A104DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A73310921C5B56000A104DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F6E0605D25922D54C66280D /* Pods-TripSplit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QBGPXWFD5T;
+				INFOPLIST_FILE = TripSplit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahjwoodward.TripSplit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A73310A21C5B56000A104DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6778E3828556DCB2521AFA84 /* Pods-TripSplit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QBGPXWFD5T;
+				INFOPLIST_FILE = TripSplit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahjwoodward.TripSplit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A7330EE21C5B55F00A104DA /* Build configuration list for PBXProject "TripSplit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A73310621C5B56000A104DA /* Debug */,
+				7A73310721C5B56000A104DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A73310821C5B56000A104DA /* Build configuration list for PBXNativeTarget "TripSplit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A73310921C5B56000A104DA /* Debug */,
+				7A73310A21C5B56000A104DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7A7330FD21C5B55F00A104DA /* TripSplit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7A7330FE21C5B55F00A104DA /* TripSplit.xcdatamodel */,
+			);
+			currentVersion = 7A7330FE21C5B55F00A104DA /* TripSplit.xcdatamodel */;
+			path = TripSplit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7A7330EB21C5B55F00A104DA /* Project object */;
+}
