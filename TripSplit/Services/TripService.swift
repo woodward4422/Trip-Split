@@ -212,28 +212,5 @@ struct TripService {
         }
     }
     
-    public static func getAllUsers(trip: Trip, completion: @escaping ([User]) -> Void) {
-        getTrip(uid: trip.uid) { tripOpt in
-            guard let trip = tripOpt else {
-                fatalError("trip does not exist")
-            }
-            var idMap: [String : Any] = [:]
-            trip.users.forEach({ str in
-                idMap[str] = true
-            })
-            getUsersFromIDs(idMap, completion: { users in
-                return completion(users)
-            })
-        }
-    }
-    
-    public static func getExpenseIDs(trip: Trip, completion: @escaping ([String : Any]) -> Void) {
-        let ref = Database.database().reference().child("trips").child(trip.uid).child("expenseIDs")
-        ref.observeSingleEvent(of: .value) { snapshot in
-            guard let val = snapshot.value as? [String : Any] else {
-                return completion([:])
-            }
-            return completion(val)
-        }
-    }
+
 }
