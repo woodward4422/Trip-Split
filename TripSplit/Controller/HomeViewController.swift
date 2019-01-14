@@ -46,7 +46,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         trips[indexPath.row].userOwes(User.current) { cost in
 
         }
-        cell.tripLocationLabel.text = trips[indexPath.row].location
         
         return cell
         
