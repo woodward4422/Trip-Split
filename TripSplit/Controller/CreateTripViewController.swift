@@ -25,7 +25,7 @@ class CreateTripViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    //TODO: Add the trip firebase service to create a trip
+ 
     @IBAction func createTripButtonPressed(_ sender: UIButton) {
         guard let tripName = tripNameTitleField.text else {return}
         guard let locationName = locationNameField.text else {return}

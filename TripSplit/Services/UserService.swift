@@ -10,7 +10,9 @@ import FirebaseAuth
 import FirebaseDatabase
 
 struct UserService {
-    
+    /**
+    Gets user from a UID
+     */
     public static func getUser(uid: String, completion: @escaping (User?) -> Void) {
         let ref = Database.database().reference().child("users").child(uid)
         ref.observeSingleEvent(of: .value) { snapshot in
@@ -114,12 +116,14 @@ struct UserService {
                 return completion(newUser)
             })
     }
-    
+    /**
+    Gets an auth message from an error that is passed using an enum
+     */
     static func retrieveAuthErrorMessage(for error: Error) -> String {
         guard let errorCode = AuthErrorCode(rawValue: (error._code)) else {
             return "Something went wront, please try again."
         }
-        
+        //
         switch errorCode {
         case .weakPassword:
             return "Password should contain atleast 6 characters."
@@ -137,7 +141,7 @@ struct UserService {
             return "Something went wront, please try again."
         }
     }
-    
+     // Update the User here, if not, causes a bug
     static func update(user: User, completion: @escaping (Bool) -> Void) {
         let refUser = Database.database().reference().child("users").child(user.uid)
         refUser.updateChildValues(user.dictValue) { (error, _) in
@@ -149,7 +153,9 @@ struct UserService {
             completion(true)
         }
     }
-    
+    /**
+     Have to add trip to a specific user, ake sure to not have nested schema
+     */
     static func addTrip(to user: User, trip: Trip, completion: @escaping (User?) -> Void) {
         var newUser = user
         newUser.addTrip(trip)
@@ -162,7 +168,9 @@ struct UserService {
             }
         }
     }
-    
+    /**
+     Get a list of trips based off the user id, with trip ids
+     */
     public static func getAllTrips(from user: User, completion: @escaping ([Trip]) -> Void) {
         let ref = Database.database().reference().child("users").child(user.uid).child("tripIDs")
         ref.observeSingleEvent(of: .value) { snapshot in
@@ -174,7 +182,9 @@ struct UserService {
             })
         }
     }
-    
+    /**
+     Helper method which will get all the trip ids needed
+     */
     private static func getTripsFromIDs(_ idMap: [String : Any], completion: @escaping ([Trip]) -> Void) {
         var trips: [Trip] = []
         let ref = Database.database().reference().child("trips")
@@ -191,7 +201,9 @@ struct UserService {
             return completion(trips)
         }
     }
-    
+    /**
+     Pay for a specific expense and a user, expense service will be updated
+     */
     public static func pay(user: User, expense: Expense, completion: @escaping (Expense?) -> Void) {
         var newExpense = expense
         newExpense.addUserWhoPaid(user)
@@ -203,7 +215,9 @@ struct UserService {
             }
         }
     }
-    
+    /**
+     Helper method that will 
+     */
     public static func getAllExpenses(for user: User, in trip: Trip, completion: @escaping ([Expense]) -> Void) {
         var expenses: [Expense] = []
         let ref = Database.database().reference().child("trips").child(trip.uid).child("expenseIDs")

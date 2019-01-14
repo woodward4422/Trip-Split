@@ -23,9 +23,7 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    // TODO: Do user service register, but for now, we will just present the
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        
         guard let name = nameTextField.text else {fatalError("User did not enter a valid name")}
         guard let email = emailTextfField.text else {fatalError("User did not enter a valid email")}
         guard let password = passwordTextField.text else {fatalError("User did not enter a valid password")}
@@ -34,7 +32,6 @@ class RegisterViewController: UIViewController {
             guard let user = user else {fatalError("Attempted to register but not given back a valid user in closure")}
             User.setCurrent(user, writeToUserDefaults: true)
             self.performSegue(withIdentifier: "toHomeVC", sender: nil)
-            
         }
         
     }
